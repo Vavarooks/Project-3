@@ -19,4 +19,4 @@ app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/userstockitem_db', { useNewUrlParser: true,  useUnifiedTopology: true  });
 
-app.listen(PORT, () => console.log("Server started"));
+app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));
