@@ -2,7 +2,6 @@ const { Todo } = require('../models');
 
 module.exports = {
   getTodos: async (req, res) => {
-    // console.log(req.query)
     try {
       const todos = await Todo.find();
       if (!todos) {
@@ -14,4 +13,3 @@ module.exports = {
     }
   },
 };
-

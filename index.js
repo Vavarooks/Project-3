@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.use("/",routes);
-require('./services/passport');
+// require('./services/passport');
 // Connect database
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/userstockitem', { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: false });
 
