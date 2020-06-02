@@ -5,23 +5,23 @@ const {
   updateTodoById,
   getAllUserEmails,
   addTodo,
-} = require('../../../controllers/userController');
+} = require('./../../../controllers/userController');
 
-const { requireAuth } = require('../../../middlewares/authMiddlewares');
+const { requireAuth } = require('./../../../middlewares/authMiddlewares');
 
 // /api/user/emails
 router.get('/emails', getAllUserEmails);
 
 
 // /api/user/todos
-router.route('/todos')
+router.route('/todo')
   .get(requireAuth, getUserTodos)
   .post(requireAuth, addTodo);
 
 // /api/user/emails
 
 // /api/user/todos/:todoID
-router.route('/todos/:todoId')
+router.route('/todo/:todoId')
   .delete(requireAuth, deleteUserTodoById)
   .put(requireAuth, updateTodoById);
 
