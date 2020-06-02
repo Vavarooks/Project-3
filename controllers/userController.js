@@ -16,15 +16,6 @@ module.exports = {
       return res.status(403).json({ e });
     }
   },
-  // getAllUserEmails: async (req, res) => {
-  //   try {
-  //     const userEmail = await User.find({}, 'email');
-  //     if(!userEmail) {return res.status(404).json({error:'no user emails found'});}
-  //     return res.status(200).json(userEmail);
-  //   } catch (e) {
-  //     return res.status(403).json({ e });
-  //   }
-  // }
   getAllUserEmails: async (req, res) => {
     try {
       const userEmail = await User.findOne({ email: req.query.email }, 'email');
@@ -35,8 +26,6 @@ module.exports = {
   },
   getUserTodos: async (req, res) => {
     try {
-      // const user = await User.findById(req.user._id).populate('todos','text');
-      // return res.status(200).json(user.todos)
       const todos = await Todo.find({ user: req.user._id });
       return res.json(todos);
     } catch (e) {
@@ -52,9 +41,6 @@ module.exports = {
       if (!todoToDelete) {
         return res.status(401).json({ error: 'No todo with that Id' });
       }
-      // console.log('current logged in users id', req.user._id)
-      // console.log('id of the user that the todo belongs to', todoToDelete.user)
-      // return res.status(200).json('hello')
       // Check if the todo does not belong to the user.
       // if it doesnt, do not allow the user to delete it
       if (req.user._id.toString() !== todoToDelete.user.toString()) {
@@ -73,14 +59,10 @@ module.exports = {
     const { todoId } = req.params;
     //  grab text and completed from the database
     const { text, completed } = req.body;
-    if(!text){
-      return res.status(400).json({error:'you must provide a text'})
-    }
-
     try {
       const todoToUpdate = await Todo.findById(todoId);
       if (!todoToUpdate) {
-        return res.status(404).json({ error: 'No todo with that Id'});
+        return res.status(401).json({ error: 'No todo with that Id'});
       }
       if (req.user._id.toString() !== todoToUpdate.user.toString()) {
         return res.status(401).json({ error: "You cannot update a todo that's not yours" });
