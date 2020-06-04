@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
 import NavBar from './../../components/Navbar';
-import Counter from '../Counter';
+import Counter from '../Main';
 import AllTodosList from "./../AllTodosList"
 import SignUp from '../SignUp';
 import SignIn from '../SignIn';
