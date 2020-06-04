@@ -1,8 +1,8 @@
 import {
   GET_ALL_TODOS,
   GET_ALL_TODOS_ERROR,
-  // GET_USER_TODOS,
-  // GET_USER_TODOS_ERROR,
+  GET_USER_TODOS,
+  GET_USER_TODOS_ERROR,
   // UPDATE_TODO_BY_ID_ERROR,
   // DELETE_TODO_BY_ID_ERROR,
 } from '../types';
@@ -48,14 +48,14 @@ export const getAllTodos = () => async dispatch => {
 //   }
 // };
 
-// export const getUserTodos = () => async dispatch => {
-//   try {
-//     const { data } = await axios.get('/api/user/todos', { headers: { 'authorization': localStorage.getItem('token')} } );
-//     dispatch({ type: GET_USER_TODOS, payload: data });
-//   } catch (e) {
-//     dispatch({ type: GET_USER_TODOS_ERROR, serverError: e, userError: 'Please refresh the page and try again' });
-//   }
-// };
+export const getUserTodos = () => async dispatch => {
+  try {
+    const { data } = await axios.get('/api/user/todos', { headers: { 'authorization': localStorage.getItem('token')} } );
+    dispatch({ type: GET_USER_TODOS, payload: data });
+  } catch (e) {
+    dispatch({ type: GET_USER_TODOS_ERROR, serverError: e, userError: 'Please refresh the page and try again' });
+  }
+};
 
 
 
