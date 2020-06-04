@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { increment, decrement } from '../../actions/counter';
 
-import requireAuth from '../../hoc/requireAuth';
+// import requireAuth from '../../hoc/requireAuth';
 
 class Counter extends Component {
   render() {
@@ -15,25 +15,10 @@ class Counter extends Component {
           <Header
             as='h1'
             textAlign='center'
-            content='Welcome to the Counter App'
+            content='Main Page'
           />
-          <Header as='h2' textAlign='center'>Counter: <span>{this.props.counter}</span></Header>
-          <Button.Group>
-            <Button
-              icon='minus circle'
-              content='Decrement'
-              negative
-              onClick={ this.props.decrement }
-            />
-            <Button.Or/>
-            <Button
-              icon='plus circle'
-              content='Increment'
-              positive
-              onClick={ this.props.increment }
-            />
-          </Button.Group>
-        </Grid.Column>
+        
+         </Grid.Column>
       </Grid>
     );
   }
@@ -51,7 +36,7 @@ function mapStateToProps(state) {
 
 // export default requireAuth(connect(mapStateToProps, { increment, decrement })(Counter));
 //
-export default compose(
-  connect(mapStateToProps, { increment, decrement}),
-  requireAuth
-)(Counter);
+// export default compose(
+//   connect(mapStateToProps, { increment, decrement}),requireAuth)(Counter);
+
+export default connect(mapStateToProps,{increment,decrement})(Counter)
