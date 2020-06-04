@@ -3,43 +3,72 @@ import { Field, reduxForm, SubmissionError } from 'redux-form';
 import { Form, Segment, Button } from 'semantic-ui-react';
 import { email, required } from 'redux-form-validators';
 import axios from 'axios';
-import { AUTH_USER } from '../../actions/types';
+import { AUTH_USER, AUTH_USER_ERROR} from '../../actions/types';
 
 class SignIn extends Component {
 
   onSubmit = async (formValues, dispatch) => {
-    try {
+     try {
       const { data } = await axios.post('/api/auth/signin', formValues);
       localStorage.setItem('token', data.token);
       dispatch({ type: AUTH_USER, payload: data.token });
       this.props.history.push('/counter');
     } catch (e) {
-      throw new SubmissionError({
-        email: 'Please try again',
-        password: 'You entered a bad password',
-        _error: 'Login Failed'
-      });
+      dispatch({type:AUTH_USER_ERROR,payload:e})
+      // throw new SubmissionError({
+      //   email: 'Please try again',
+      //   password: 'You entered a bad password',
+      //   _error: 'Login Failed'
+      // });
     }
   }
 
-  renderEmail = ({ input, meta }) => {
-    return (
+  // renderEmail = ({ input, meta }) => {
+  //   return (
+  //     <Form.Input
+  //       {...input}
+  //       error={ meta.touched && meta.error }
+  //       fluid
+  //       icon='user'
+  //       iconPosition='left'
+  //       autoComplete='off'
+  //       placeholder='Email Address'
+  //     />
+  //   );
+  // }
+  // renderPassword = ({ input, meta }) => {
+  //   return (
+  //     <Form.Input
+  //       {...input}
+  //       error={  meta.touched && meta.error }
+  //       fluid
+  //       type='password'
+  //       icon='lock'
+  //       placeholder='password'
+  //       autoComplete='off'
+  //       iconPosition='left'
+  //     />
+  //   );
+  // }
+  renderEmail = ({input,meta}) => {
+    // console.log(meta);
+    return(
       <Form.Input
-        {...input}
-        error={ meta.touched && meta.error }
-        fluid
-        icon='user'
-        iconPosition='left'
-        autoComplete='off'
-        placeholder='Email Address'
+      {...input}
+      error={meta.touched && meta.error}
+      fluid
+      icon='user'
+      iconPosition='left'
+      autoComplete='off'
+      placeholder='Email Address'
       />
-    );
+    )
   }
   renderPassword = ({ input, meta }) => {
     return (
       <Form.Input
         {...input}
-        error={  meta.touched && meta.error }
+        error={meta.touched && meta.error }
         fluid
         type='password'
         icon='lock'
@@ -49,42 +78,75 @@ class SignIn extends Component {
       />
     );
   }
-  render() {
-    const { invalid, submitting, submitFailed, handleSubmit } = this.props;
-    return (
+
+  render(){
+    const {handleSubmit,invalid,submitting,submitFailed}=this.props
+    return(
       <Form size='large' onSubmit={handleSubmit(this.onSubmit)}>
         <Segment stacked>
           <Field
-            name='email'
-            iscool='mannyiscool'
-            component={ this.renderEmail }
-            validate={
-              [
-                required({ msg: 'Email is required' }),
-                email({ msg: 'You must provide a valid email address' })
-              ]
-            }
+          name='email'
+          component={this.renderEmail}
+          validate={[
+            required({msg:'Email is required'}),
+            email({ msg: 'You must provide a valid email address' })
+          ]}
           />
           <Field
-            name='password'
-            component={this.renderPassword}
-            validate={
-              [
-                required({ msg: 'You must provide a password' })
-              ]
-            }
+          name='password'
+          component={this.renderPassword}
+          validate={[
+            required({msg:'you must provide a password'})
+          ]}
           />
           <Button
-            content='Sign In'
-            color='teal'
-            fluid
-            size='large'
-            type='submit'
-            disabled={ submitting }
+          content='Sign In'
+          color='blue'
+          fluid
+          size='large'
+          type='submit'
+          disabled={invalid || submitting || submitFailed}
           />
         </Segment>
       </Form>
-    );
+    )
   }
+  // render() {
+  //   const { invalid, submitting, submitFailed, handleSubmit } = this.props;
+  //   return (
+  //     <Form size='large' onSubmit={handleSubmit(this.onSubmit)}>
+  //       <Segment stacked>
+  //         <Field
+  //           name='email'
+  //           iscool='mannyiscool'
+  //           component={ this.renderEmail }
+  //           validate={
+  //             [
+  //               required({ msg: 'Email is required' }),
+  //               email({ msg: 'You must provide a valid email address' })
+  //             ]
+  //           }
+  //         />
+  //         <Field
+  //           name='password'
+  //           component={this.renderPassword}
+  //           validate={
+  //             [
+  //               required({ msg: 'You must provide a password' })
+  //             ]
+  //           }
+  //         />
+  //         <Button
+  //           content='Sign In'
+  //           color='teal'
+  //           fluid
+  //           size='large'
+  //           type='submit'
+  //           disabled={ submitting }
+  //         />
+  //       </Segment>
+  //     </Form>
+  //   );
+  // }
 }
 export default reduxForm({ form: 'signin' })(SignIn);
