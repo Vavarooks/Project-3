@@ -36,7 +36,9 @@ class App extends Component {
           
            <NavBar authenticated={this.props.authenticated}/>
            <Route exact path='/home' component={Counter}/>
+
            {/* <Route exact path='/alltodos' component={AllTodosList}/> */}
+
            <Route exact path='/' component={SignUp}/>
            <Route exact path='/signin' component={SignIn}/>
            <Route exact path='/signout' component={SignOut}/>
