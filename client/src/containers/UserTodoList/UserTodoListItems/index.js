@@ -11,13 +11,14 @@ export default (props) => {
       return (
         <List.Item key={_id}>
           <List.Content floated='left'>
+          {/* <p style={{fontSize:'20px'}}>{text}</p> */}
             <p style={{ textDecoration: completed ? 'line-through' : 'none', fontSize: '20px'}} >{text}</p>
           </List.Content>
           <List.Content floated='right'>
             <Button
-              color='blue'
-              content='Mark Complete'
+              color='teal'
               size='small'
+              content='Mark Complete'
               onClick={ () => props.handleUpdate(_id, completed, text )}/>
             <DeleteTodoModal handleDelete={props.handleDelete} id={_id} text={text}/>
           </List.Content>
