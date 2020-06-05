@@ -14,11 +14,12 @@ export default (props) => (
 {props.authenticated ? <Menu.Item as ={Link} to="/signout" content="sign Out"/> 
 : <Menu.Item> <Button as ={Link} to="/signin" content="Log-in"/></Menu.Item> }
 
-{props.authenticated ? <Menu.Item as ={Link} to="/usertodos" content="my todos"/>
+{props.authenticated ? <Menu.Item as ={Link} to="/usertodos" content="WatchList" icon='eye'/>
 :null }
 
-{props.authenticated ? <Menu.Item as ={Link} to="/alltodos" content="all todos"/>
-:null}
+ {/* {props.authenticated ? <Menu.Item as ={Link} to="/alltodos" content="all todos"/>
+:null}  */}
+
 
 
 
