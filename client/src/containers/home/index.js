@@ -12,13 +12,8 @@ class Counter extends Component {
     return (
       <Grid centered>
         <Grid.Column textAlign='center'>
-          <Header
-            as='h1'
-            textAlign='center'
-            content='Main Page'
-          />
-        
-         </Grid.Column>
+       
+        </Grid.Column>
       </Grid>
     );
   }
