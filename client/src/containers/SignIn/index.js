@@ -3,7 +3,7 @@ import { Field, reduxForm, SubmissionError } from 'redux-form';
 import { Form, Segment, Button } from 'semantic-ui-react';
 import { email, required } from 'redux-form-validators';
 import axios from 'axios';
-import { AUTH_USER, AUTH_USER_ERROR} from '../../actions/types';
+import { AUTH_USER} from '../../actions/types';
 
 class SignIn extends Component {
 
@@ -14,12 +14,11 @@ class SignIn extends Component {
       dispatch({ type: AUTH_USER, payload: data.token });
       this.props.history.push('/counter');
     } catch (e) {
-      dispatch({type:AUTH_USER_ERROR,payload:e})
-      // throw new SubmissionError({
-      //   email: 'Please try again',
-      //   password: 'You entered a bad password',
-      //   _error: 'Login Failed'
-      // });
+       throw new SubmissionError({
+        email: 'Please try again',
+        password: 'You entered a bad password',
+        _error: 'Login Failed'
+      });
     }
   }
 
