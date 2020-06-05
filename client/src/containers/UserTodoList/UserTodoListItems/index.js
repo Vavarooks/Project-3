@@ -5,7 +5,7 @@ import DeleteTodoModal from './../../../components/DeleteTodoModal';
 
 export default (props) => {
   if (props.todos.length === 0) {
-    return <Header content='No todos yet, please add a todo'/>
+    return <Header content='add your stocks here!'/>
   } else {
     return props.todos.map(({_id, completed, text}) => {
       return (
