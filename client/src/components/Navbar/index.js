@@ -4,7 +4,7 @@ import { Menu, Segment, Button } from 'semantic-ui-react';
 
 
 export default (props) => (
-   <Menu widths={3} inverted>
+   <Menu widths={4} inverted>
 
 <Menu.Item  as ={Link} to="/home" content="Home" icon='home'/>
 
@@ -17,8 +17,8 @@ export default (props) => (
 {props.authenticated ? <Menu.Item as ={Link} to="/usertodos" content="WatchList" icon='eye'/>
 :null }
 
- {/* {props.authenticated ? <Menu.Item as ={Link} to="/alltodos" content="all todos"/>
-:null}  */}
+ {props.authenticated ? <Menu.Item as ={Link} to="/popular" content="popular"/>
+:null} 
 
 
    </Menu>
