@@ -3,10 +3,10 @@ import { Route } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
 import NavBar from './../../components/Navbar';
 import Counter from '../home';
-import AllTodosList from "./../AllTodosList"
+// import AllTodosList from "./../AllTodosList"
 import SignUp from '../SignUp';
 import SignIn from '../SignIn';
-import UserTodoList from '../UserTodoList';
+import UserTodoList from '../userWatchList';
 import SignOut from '../SignOut';
   
 // import Chat from '../chatComponent';

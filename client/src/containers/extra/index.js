@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { List, Header, Message } from 'semantic-ui-react';
 // Message third paramater
 import { connect } from 'react-redux';
-import { getAllTodos } from './../../actions/todos';
+import { getAllTodos } from '../../actions/todos';
 import moment from 'moment';
 
 class AllTodosList extends Component {
@@ -50,3 +50,6 @@ export default connect(mapStateToProps, { getAllTodos })(AllTodosList);
 
 // { this.props.getAllTodosError ? <Message negative header={this.props.getAllTodosError}/> : null }
 // { this.renderList() }
+
+
+// folder name = AllTodosList
