@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
 import NavBar from './../../components/Navbar';
 import Counter from '../home';
-// import AllTodosList from "./../AllTodosList"
+import AllTodosList from "../popular"
 import SignUp from '../SignUp';
 import SignIn from '../SignIn';
 import UserTodoList from '../userWatchList';
@@ -38,7 +38,7 @@ class App extends Component {
            <Route exact path='/home' component={Counter}/>
 
 
-           {/* <Route exact path='/alltodos' component={AllTodosList}/> */}
+           <Route exact path='/popular' component={AllTodosList}/>
 
 
            <Route exact path='/' component={SignUp}/>
