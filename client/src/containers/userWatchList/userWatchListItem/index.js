@@ -5,6 +5,7 @@ import { Table } from 'semantic-ui-react'
 
 
 export default (props) => {
+
   return(
  <div>
 
@@ -19,12 +20,14 @@ export default (props) => {
     <Table.Body>
      
 {props.todos.map(({_id,completed,text,dateCreated})=>(
-   <Table.Row>
-       <Table.Cell> <h1>{text}</h1></Table.Cell>
-       <Table.Cell>{dateCreated}</Table.Cell>
+
+   <Table.Row key={_id}>
+       <Table.Cell > <h1>{text}</h1></Table.Cell>
+       <Table.Cell>{dateCreated} </Table.Cell>
        <DeleteTodoModal handleDelete={props.handleDelete} id={_id} text={text}/>
 
-      </Table.Row>
+       </Table.Row>
+
  ))}
     
     </Table.Body>
