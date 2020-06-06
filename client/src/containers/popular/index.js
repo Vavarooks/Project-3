@@ -13,7 +13,7 @@ class AllTodosList extends Component {
 
   renderList = () => {
     if (this.props.allTodos.length === 0) {
-      return <Header content='No todos yet'/>;
+      return <Header content='No stocks yet'/>;
     } else {
       return this.props.allTodos.map(({ _id, text, dateCreated}) => {
         return (
