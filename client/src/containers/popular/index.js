@@ -3,10 +3,12 @@ import { List, Header, Message } from 'semantic-ui-react';
 // Message third paramater
 import { connect } from 'react-redux';
 import { getAllTodos } from '../../actions/todos';
+
 // import {renderList} from './../rendernewList'
 import moment from 'moment';
 import DeleteTodoModal from './../../components/DeleteModal';
 import { Table } from 'semantic-ui-react'
+
 
 class AllTodosList extends Component {
   componentDidMount() {
@@ -66,14 +68,17 @@ class AllTodosList extends Component {
   };
    
 
+
   render() {
     console.log(this.props);
     return (
       <List celled selection size='huge'>
         {this.props.getAllTodosError ? <Message negative header={this.props.getAllTodosError}/> : null}
+
       { this.renderList() }
 
        </List>
+
     );
   }
 }
