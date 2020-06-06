@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header, List, Button } from 'semantic-ui-react';
 
-import DeleteTodoModal from './../../../components/DeleteTodoModal';
+import DeleteTodoModal from '../../../components/DeleteModal';
 
 export default (props) => {
   if (props.todos.length === 0) {

@@ -7,12 +7,12 @@ import { compose } from 'redux';
 
 import axios from 'axios';
 
-import UserTodoListItems from './UserTodoListItems';
+import UserTodoListItems from './userWatchListItem';
 
 // import requireAuth from '../../hoc/requireAuth';
 
 
-import { getUserTodos, updateTodoCompletedById, deleteTodoById } from './../../actions/todos';
+import { getUserTodos, updateTodoCompletedById, deleteTodoById } from '../../actions/todos';
 
 import { ADD_TODO_ERROR, ADD_TODO} from '../../actions/types';
 
