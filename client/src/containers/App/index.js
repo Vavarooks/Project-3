@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
 import NavBar from './../../components/Navbar';
-import Counter from '../home';
+import Winners from '../winners';
+import Losers from './../losers'
 import AllTodosList from "../popular"
 import SignUp from '../SignUp';
 import SignIn from '../SignIn';
 import UserTodoList from '../userWatchList';
 import SignOut from '../SignOut';
-  
+import Home from './../home';
+import './../../index.css'
+
 // import Chat from '../chatComponent';
 
 
@@ -35,8 +38,12 @@ class App extends Component {
         <Grid.Column style={{ maxWidth: 700 }}>
           
            <NavBar authenticated={this.props.authenticated}/>
-           <Route exact path='/home' component={Counter}/>
+           <Route exact path='/home' component={Home}/>
 
+           <Route exact path='/winners' component={Winners}/>
+           <Route exact path='/losers' component={Losers}/>
+
+ 
 
            <Route exact path='/popular' component={AllTodosList}/>
 
