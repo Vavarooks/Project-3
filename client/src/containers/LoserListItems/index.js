@@ -62,7 +62,9 @@ const LoserListItems = props => (
     <Table widths={4}>
     <Table.Header>
        <Table.Row>
+
        <Table.HeaderCell><h2> Company [ticker]</h2></Table.HeaderCell>
+
        <Table.HeaderCell>Last price</Table.HeaderCell>
        <Table.HeaderCell>price change</Table.HeaderCell>
 
@@ -72,8 +74,10 @@ const LoserListItems = props => (
      </Table.Header>
      <Table.Body>
       
+
  {props.losers.map(({performanceId,standardName,lastPrice,priceChange,percentChange,ticker})=>(
        <Table.Row key={performanceId}>
+
        <Table.Cell > <h3>{standardName} [{ticker}]</h3></Table.Cell>
        <Table.Cell>${lastPrice} </Table.Cell>
        <Table.Cell >${priceChange} </Table.Cell>

@@ -49,6 +49,7 @@ componentDidMount=()=>{
       .catch((error)=>{
         console.log(error)
       })
+
     // axios({
     //   "method":"GET",
     //   "url":"https://morning-star.p.rapidapi.com/market/v2/get-movers",
@@ -69,6 +70,7 @@ componentDidMount=()=>{
     //   .catch((error)=>{
     //     console.log(error)
     //   })
+
   }
 
   render() {

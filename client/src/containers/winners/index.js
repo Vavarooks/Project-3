@@ -50,6 +50,7 @@ getWinners = () => {
     .catch((error)=>{
       console.log(error)
     })
+
   // axios({
   //   "method":"GET",
   //   "url":"https://morning-star.p.rapidapi.com/market/v2/get-movers",
@@ -70,6 +71,7 @@ getWinners = () => {
   //   .catch((error)=>{
   //     console.log(error)
   //   })
+
 }
 
 
