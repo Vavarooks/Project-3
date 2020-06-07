@@ -62,7 +62,9 @@ const LoserListItems = props => (
     <Table widths={4}>
     <Table.Header>
        <Table.Row>
-       <Table.HeaderCell>exchange[ticker]</Table.HeaderCell>
+
+       <Table.HeaderCell><h2> Company [ticker]</h2></Table.HeaderCell>
+
        <Table.HeaderCell>Last price</Table.HeaderCell>
        <Table.HeaderCell>price change</Table.HeaderCell>
 
@@ -72,13 +74,14 @@ const LoserListItems = props => (
      </Table.Header>
      <Table.Body>
       
- {props.losers.map(({index,exchange,lastPrice,priceChange,percentChange,ticker})=>(
+ {props.losers.map(({index,standardName,lastPrice,priceChange,percentChange,ticker})=>(
        <Table.Row >
-       <Table.Cell > <h1>{exchange} [{ticker}]</h1></Table.Cell>
+       <Table.Cell > <h3>{standardName} [{ticker}]</h3></Table.Cell>
        <Table.Cell>${lastPrice} </Table.Cell>
        <Table.Cell >${priceChange} </Table.Cell>
 
-       <Table.Cell negative>+{percentChange}% </Table.Cell>
+       <Table.Cell negative>{percentChange}% </Table.Cell>
+
 
 
        {/* <DeleteTodoModal handleDelete={props.handleDelete} id={_id} text={text}/> */}

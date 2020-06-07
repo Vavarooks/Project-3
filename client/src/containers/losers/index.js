@@ -49,6 +49,28 @@ componentDidMount=()=>{
       .catch((error)=>{
         console.log(error)
       })
+
+    // axios({
+    //   "method":"GET",
+    //   "url":"https://morning-star.p.rapidapi.com/market/v2/get-movers",
+    //   "headers":{
+    //   "content-type":"application/octet-stream",
+    //   "x-rapidapi-host":"morning-star.p.rapidapi.com",
+    //   "x-rapidapi-key":"f75310b92amsh13e6e1887369dacp14e2b7jsn1d042dbb2e3b",
+    //   "useQueryString":true
+    //   }
+    //   })
+    //   .then((response)=>{
+    //     this.setState({
+    //       loser:response.data.losers
+    //     },()=>{
+    //       console.log(response.data.gainers)
+    //     })
+    //   })
+    //   .catch((error)=>{
+    //     console.log(error)
+    //   })
+
   }
 
   render() {
