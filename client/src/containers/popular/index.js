@@ -3,12 +3,10 @@ import { List, Header, Message } from 'semantic-ui-react';
 // Message third paramater
 import { connect } from 'react-redux';
 import { getAllTodos } from '../../actions/todos';
-
 // import {renderList} from './../rendernewList'
 import moment from 'moment';
 import DeleteTodoModal from './../../components/DeleteModal';
 import { Table } from 'semantic-ui-react'
-
 
 class AllTodosList extends Component {
   componentDidMount() {
@@ -49,9 +47,9 @@ class AllTodosList extends Component {
       </Table.Header>
       <Table.Body>
        
-  {this.props.allTodos.map(({_id,completed,text,dateCreated})=>(
+  {this.props.allTodos.map(({_id,text,dateCreated})=>(
      <Table.Row key={_id}>
-         <Table.Cell> <h1>{text}</h1></Table.Cell>
+         <Table.Cell> <h3>{text}</h3></Table.Cell>
          <Table.Cell>{dateCreated}</Table.Cell>
    
         </Table.Row>
@@ -68,17 +66,14 @@ class AllTodosList extends Component {
   };
    
 
-
   render() {
     console.log(this.props);
     return (
       <List celled selection size='huge'>
         {this.props.getAllTodosError ? <Message negative header={this.props.getAllTodosError}/> : null}
-
       { this.renderList() }
 
        </List>
-
     );
   }
 }

@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const {
-  getUserTodos,
-  deleteUserTodoById,
-  updateTodoById,
+  getUserStocks,
+  deleteUserStockById,
+  updateStockById,
   getAllUserEmails,
-  addTodo,
+  addStock,
 } = require('./../../../controllers/userController');
 
 const { requireAuth } = require('./../../../middlewares/authMiddlewares');
@@ -15,14 +15,14 @@ router.get('/emails', getAllUserEmails);
 
 // /api/user/todos
 router.route('/todo')
-  .get(requireAuth, getUserTodos)
-  .post(requireAuth, addTodo);
+  .get(requireAuth, getUserStocks)
+  .post(requireAuth, addStock);
 
 // /api/user/emails
 
 // /api/user/todos/:todoID
-router.route('/todo/:todoId')
-  .delete(requireAuth, deleteUserTodoById)
-  .put(requireAuth, updateTodoById);
+router.route('/todo/:stockId')
+  .delete(requireAuth, deleteUserStockById)
+  .put(requireAuth, updateStockById);
 
 module.exports = router;
