@@ -64,7 +64,9 @@ const WinnerListItems = props => (
     <Table widths={4}>
      <Table.Header>
        <Table.Row>
+
        <Table.HeaderCell><h2>Company [ticker]</h2></Table.HeaderCell>
+
        <Table.HeaderCell>Last price</Table.HeaderCell>
        <Table.HeaderCell>price change</Table.HeaderCell>
 
@@ -74,9 +76,11 @@ const WinnerListItems = props => (
      </Table.Header>
      <Table.Body>
       
+
  {props.gainers.map(({index,standardName,ticker,percentChange,lastPrice,priceChange,exchange})=>(
     <Table.Row >
         <Table.Cell > <h3>{standardName} [{ticker}]</h3></Table.Cell>
+
         <Table.Cell>${lastPrice} </Table.Cell>
         <Table.Cell >${priceChange} </Table.Cell>
 

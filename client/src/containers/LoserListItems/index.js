@@ -62,7 +62,9 @@ const LoserListItems = props => (
     <Table widths={4}>
     <Table.Header>
        <Table.Row>
+
        <Table.HeaderCell><h2> Company [ticker]</h2></Table.HeaderCell>
+
        <Table.HeaderCell>Last price</Table.HeaderCell>
        <Table.HeaderCell>price change</Table.HeaderCell>
 
@@ -79,6 +81,7 @@ const LoserListItems = props => (
        <Table.Cell >${priceChange} </Table.Cell>
 
        <Table.Cell negative>{percentChange}% </Table.Cell>
+
 
 
        {/* <DeleteTodoModal handleDelete={props.handleDelete} id={_id} text={text}/> */}
