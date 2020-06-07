@@ -49,7 +49,7 @@ class AllTodosList extends Component {
        
   {this.props.allTodos.map(({_id,text,dateCreated})=>(
      <Table.Row key={_id}>
-         <Table.Cell> <h1>{text}</h1></Table.Cell>
+         <Table.Cell> <h3>{text}</h3></Table.Cell>
          <Table.Cell>{dateCreated}</Table.Cell>
    
         </Table.Row>

@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const TodoSchema = new Schema({
+const StockScema = new Schema({
   text: {
     type: String,
     required: true,
@@ -16,6 +16,6 @@ const TodoSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User' },
 });
 
-const Todo = model('Todo', TodoSchema);
+const Stock = model('Stock', StockScema);
 
-module.exports = Todo;
+module.exports = Stock;

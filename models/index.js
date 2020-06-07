@@ -1,7 +1,7 @@
-const Todo = require('./Todo');
+const Stock = require('./Stock');
 const User = require('./User');
 
 module.exports = {
-  Todo,
+  Stock,
   User,
 };
