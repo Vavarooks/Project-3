@@ -26,6 +26,7 @@ class App extends Component {
   // state = {
   //   socket: io()
   // }
+  
   render () {
     return (
       <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>

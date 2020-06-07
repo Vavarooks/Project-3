@@ -18,6 +18,8 @@ class SignUp extends Component {
     }
   }
 
+  // render(<p>Hello</p>, document.getElementById('root'));
+
   renderEmail = ({ input, meta }) => {
     return (
       <Form.Input
@@ -47,11 +49,14 @@ class SignUp extends Component {
       />
     );
   }
+  
 
   render() {
     console.log("Inside of signup render", this.props);
     const { handleSubmit, invalid, submitting, submitFailed } = this.props;
     return (
+      
+
       <Form size='large' onSubmit={handleSubmit(this.onSubmit)}>
         <Segment stacked>
           <Field

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Header, Icon, Modal } from 'semantic-ui-react';
+import { render } from 'react-dom';
 
 export default (props) => (
   <Modal
@@ -21,3 +22,4 @@ export default (props) => (
     </Modal.Actions>
   </Modal>
 );
+

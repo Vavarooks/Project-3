@@ -4,7 +4,10 @@ import { Menu } from 'semantic-ui-react';
 
 
 
+
 export default (props) => (
+
+  
   <Menu widths={5}>
     { props.isLoggedIn ? null : <Menu.Item as={Link} to='/' content='Sign Up'/> }
     <Menu.Item as={Link} content='Chat' to='/chat'/>
@@ -14,3 +17,4 @@ export default (props) => (
     <Menu.Item as={Link} to='/alltodos' content='Get All Todos'/>
   </Menu>
 );
+

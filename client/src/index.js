@@ -17,6 +17,7 @@ import App from './containers/App';
 
 import reducers from './reducers';
 
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 // 1st param is our reducers
 // 2nd param is any preloaded state we want
@@ -28,6 +29,7 @@ const store = createStore(
   { auth: { authenticated: localStorage.getItem('token')}},
   composeEnhancers(applyMiddleware(socketMiddleware(), reduxThunk))
 );
+
 
 
 
