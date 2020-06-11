@@ -6,7 +6,7 @@ import { Grid,Message } from 'semantic-ui-react'
 import Card from './../Card'
 import Plot from 'react-plotly.js';
 import otherUtil from './../otherutil'
-
+  
 
 
  
@@ -18,19 +18,9 @@ export default class FormContainer extends Component {
         yvalues:[]
        };
       componentDidMount() {
-
-   
- 
-
         this.searchMovies('aapl');
  
       }
-
- 
-
-    
-
-
 
       searchMovies = (query) => {
         let xfunction=[];
@@ -39,7 +29,7 @@ export default class FormContainer extends Component {
         otherUtil.search(query)
         .then((response)=>{
           this.setState({result:response.data},()=>{
-            console.log(response.data)
+            console.log('post json',response.data)
           })
         })
 
@@ -112,6 +102,8 @@ heading={this.state.result.name ||
   <h3> </h3>
 ) }
 </Card>
+
+{/* <UserTodoList/> */}
 <div>
 <Plot 
         data={[
@@ -123,9 +115,12 @@ heading={this.state.result.name ||
             marker: {color: 'red'},
           }
         ]}
-        layout={{width: 630, height: 450 }}
-      />
-</div>
+        layout={{width: 630, height: 450, }}
+       />
+
+
+
+ </div>
  
 
 {/* </Grid.Column>

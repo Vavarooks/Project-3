@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Grid,Divider,Header, Form, Segment, Message, List, Pagination, Button, Icon } from 'semantic-ui-react';
 import FormContainer from './../searchForm/formContainer/index'
 import { compose } from 'redux';
-
+  
 import axios from 'axios';
 
 import UserTodoListItems from './userWatchListItem';
@@ -24,8 +24,11 @@ state={
   end:10
 }
 
+
+ 
+
   onSubmit = async (formValues,dispatch) => {
-    try {
+     try {
       await axios.post('/api/user/stock', formValues, { headers: { 'authorization': localStorage.getItem('token')}} );
       dispatch({ type: ADD_TODO });
       this.props.getUserTodos();
@@ -38,11 +41,11 @@ state={
  
 
   componentDidMount() {
-    this.props.getUserTodos();
-  }
+     this.props.getUserTodos();
+   }
 
   renderAddTodo = ({ input, meta }) => {
-    return (
+     return (
       <>
         <Form.Input
           {...input}
@@ -70,8 +73,7 @@ state={
 
 
   render() {
-
-    const {handleSubmit} = this.props;
+     const {handleSubmit} = this.props;
       return(
           <>
 <Segment style={{margin:'40px'}}>
@@ -80,7 +82,7 @@ state={
 
      
       <FormContainer/>   
-
+ 
 
 
      </Grid.Column>

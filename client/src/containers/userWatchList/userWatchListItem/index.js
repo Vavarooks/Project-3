@@ -1,15 +1,13 @@
 import React from 'react';
 import DeleteTodoModal from '../../../components/DeleteModal';
 import { Table } from 'semantic-ui-react'
-
-
+ 
 
 export default (props) => {
   
   return(
  <div>
-
-   <Table singleLine>
+     <Table singleLine>
     <Table.Header>
       <Table.Row>
       <Table.HeaderCell>Stock Name</Table.HeaderCell>
