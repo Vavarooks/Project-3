@@ -13,15 +13,15 @@ const { requireAuth } = require('./../../../middlewares/authMiddlewares');
 router.get('/emails', getAllUserEmails);
 
 
-// /api/user/todos
-router.route('/todo')
+// /api/user/stock
+router.route('/stock')
   .get(requireAuth, getUserStocks)
   .post(requireAuth, addStock);
 
 // /api/user/emails
 
-// /api/user/todos/:todoID
-router.route('/todo/:stockId')
+// /api/user/stock/:todoID
+router.route('/stock/:stockId')
   .delete(requireAuth, deleteUserStockById)
   .put(requireAuth, updateStockById);
 
