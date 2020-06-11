@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { connect } from 'react-redux';
-import { Header, Form, Segment, Message, List, Pagination, Button } from 'semantic-ui-react';
-
+import { Grid,Divider,Header, Form, Segment, Message, List, Pagination, Button, Icon } from 'semantic-ui-react';
+import FormContainer from './../searchForm/formContainer/index'
 import { compose } from 'redux';
 
 import axios from 'axios';
@@ -12,7 +12,7 @@ import UserTodoListItems from './userWatchListItem';
 // import requireAuth from '../../hoc/requireAuth';
 
 
-import { getUserTodos, updateTodoCompletedById, deleteTodoById } from '../../actions/todos';
+import { getUserTodos, updateTodoCompletedById, deleteTodoById } from '../../actions/stocks';
 
 import { ADD_TODO_ERROR, ADD_TODO} from '../../actions/types';
 
@@ -26,7 +26,7 @@ state={
 
   onSubmit = async (formValues,dispatch) => {
     try {
-      await axios.post('/api/user/todo', formValues, { headers: { 'authorization': localStorage.getItem('token')}} );
+      await axios.post('/api/user/stock', formValues, { headers: { 'authorization': localStorage.getItem('token')}} );
       dispatch({ type: ADD_TODO });
       this.props.getUserTodos();
     } catch (e) {
@@ -74,7 +74,22 @@ state={
     const {handleSubmit} = this.props;
       return(
           <>
-          <Header as="h2" color="blue" textAlign="center" content="welcome"/>
+<Segment style={{margin:'40px'}}>
+    <Grid columns={2} relaxed='very'>
+      <Grid.Column >
+
+     
+      <FormContainer/>   
+
+
+
+     </Grid.Column>
+      <Grid.Column> 
+          
+
+
+
+       <Header as="h2" color="blue" textAlign="center" content="watchlist"/>
           <Form size='large' onSubmit={handleSubmit(this.onSubmit)}>
               <Segment stacked>
                 <Field
@@ -106,7 +121,14 @@ state={
                 onPageChange={(event,data)=> this.handlePageChange(event,data)}
                 activePage={this.state.activePage}
                 />
-              }
+              }       
+
+              </Grid.Column>
+    </Grid>
+
+    <Divider vertical>
+     </Divider>
+  </Segment>
           </>
       );
   }
