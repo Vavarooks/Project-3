@@ -1,6 +1,7 @@
 import React from "react";
 import { Input } from 'semantic-ui-react'
 import { Button } from 'semantic-ui-react'
+import './../../index.css'
 
 
 

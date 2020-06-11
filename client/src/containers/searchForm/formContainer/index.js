@@ -22,7 +22,7 @@ export default class FormContainer extends Component {
    
  
 
-        this.searchMovies('msft');
+        this.searchMovies('aapl');
  
       }
 
@@ -73,12 +73,13 @@ export default class FormContainer extends Component {
       };
 
     render() {
+      
         return (
             <div>
 
 <div>
-<Grid padded='horizontally'textAlign='center' verticalAlign='middle'>
-        <Grid.Column style={{ maxWidth: 700 }}>
+{/* <Grid padded='horizontally'textAlign='center' verticalAlign='middle'>
+        <Grid.Column style={{ maxWidth: 700 }}> */}
 
  
           <SearchBar
@@ -87,6 +88,8 @@ export default class FormContainer extends Component {
  handleFormSubmit={this.handleFormSubmit}
 />
 <Card
+exchange={this.state.result.exchange}
+weburl={this.state.result.weburl}
 ticker={this.state.result.ticker}
 logo={this.state.result.logo}
 heading={this.state.result.name || 
@@ -98,6 +101,9 @@ heading={this.state.result.name ||
  }>
  {this.state.result.name ? (
  <Detail
+ exchange={this.state.result.exchange}
+ shareOutstanding={this.state.result.shareOutstanding}
+ finnhubIndustry={this.state.result.finnhubIndustry}
  name={this.state.result.name}
  ticker={this.state.result.ticker}
  logo={this.state.result.logo}
@@ -122,8 +128,8 @@ heading={this.state.result.name ||
 </div>
  
 
-</Grid.Column>
-</Grid>
+{/* </Grid.Column>
+</Grid> */}
        </div>
 
 
