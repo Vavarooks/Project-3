@@ -25,7 +25,6 @@ export default (props) => (
 
 {props.authenticated ? <Menu.Item as ={Link} to="/signout" content="Sign out"/> 
 : <Menu.Item> <Button as ={Link} to="/signin" content="Log-in"/></Menu.Item> }
-
    </Menu>
 
  
