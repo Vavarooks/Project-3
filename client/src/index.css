@@ -5,4 +5,9 @@ body{
 
         color:rgb(214, 31, 31);
     }
+
+.detail{margin-left:170px;
+}
  
+li{margin-bottom:5px}
+.form-control{margin-left:190px; margin-bottom:0}

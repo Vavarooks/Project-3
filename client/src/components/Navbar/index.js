@@ -5,7 +5,7 @@ import { white, orange } from 'color-name';
 
 
 export default (props) => (
-   <Menu widths={6} inverted>
+   <Menu widths={5} inverted>
 {/* <Menu.Item  as ={Link} to="/home" icon='home' content="home" /> */}
 
 {props.authenticated?<Menu.Item  as ={Link} icon='plus'to="/winners" content="Winners" /> : null}
