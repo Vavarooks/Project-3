@@ -4,7 +4,7 @@ import { List, Header, Message } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { getAllTodos } from '../../actions/stocks';
 // import {renderList} from './../rendernewList'
-import moment from 'moment';
+// import moment from 'moment';
 import DeleteTodoModal from './../../components/DeleteModal';
 import { Table } from 'semantic-ui-react'
 import FormContainer from './../searchForm/formContainer/index'
