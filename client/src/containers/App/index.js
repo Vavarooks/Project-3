@@ -62,9 +62,9 @@ class App extends Component {
           <Route exact path='/' component={SignUp}/> */}
         </Grid.Column>
       </Grid>
+      <Route exact path='/home' component={Home}/>
       <Route exact path='/watchlist' component={UserTodoList}/>
 
-      <Route exact path='/home' component={Home}/>
 
 </div>
     );

@@ -22,7 +22,7 @@ export default class FormContainer extends Component {
    
  
 
-        this.searchMovies('aapl');
+        this.searchMovies('msft');
  
       }
 

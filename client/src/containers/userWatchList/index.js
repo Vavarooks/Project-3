@@ -25,7 +25,6 @@ state={
 }
 
   onSubmit = async (formValues,dispatch) => {
-    console.log(formValues)
     try {
       await axios.post('/api/user/stock', formValues, { headers: { 'authorization': localStorage.getItem('token')}} );
       dispatch({ type: ADD_TODO });
