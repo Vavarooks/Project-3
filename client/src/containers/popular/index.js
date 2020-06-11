@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { List, Header, Message } from 'semantic-ui-react';
 // Message third paramater
 import { connect } from 'react-redux';
-import { getAllTodos } from '../../actions/todos';
+import { getAllTodos } from '../../actions/stocks';
 // import {renderList} from './../rendernewList'
 import moment from 'moment';
 import DeleteTodoModal from './../../components/DeleteModal';
 import { Table } from 'semantic-ui-react'
+import FormContainer from './../searchForm/formContainer/index'
 
 class AllTodosList extends Component {
   componentDidMount() {
@@ -36,6 +37,7 @@ class AllTodosList extends Component {
   
     return(
    <div>
+
   
      <Table singleLine>
       <Table.Header>
