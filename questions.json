@@ -1,0 +1,58 @@
+[{"type":"Scale",
+    "question":"Han shot first",
+    "answers":["1,2,3,4,5,6,7,8,9,10"]
+    },
+    
+{"type":"Scale",
+    "question":"You knew those were the droids they were looking for ",
+   "answers":["1,2,3,4,5,6,7,8,9,10"]
+    },
+    
+{"type":"Scale",
+    "question":"Would you ever kick a puppy",
+   "answers":["1,2,3,4,5,6,7,8,9,10"]
+   },
+    
+{"type":"Scale",
+    "question":"Would you help someone being mugged in the streets of Coruscant?",
+   "answers":["1,2,3,4,5,6,7,8,9,10"]
+    },
+    
+{"type":"Scale",
+    "question":"You think Ewoks are cute cuddly.",
+   "answers":["1,2,3,4,5,6,7,8,9,10"]
+    },
+    
+{"type":"Scale",
+    "question":"Force Choke is NOT an acceptable way to settle an argument",
+   "answers":["1,2,3,4,5,6,7,8,9,10"]
+    },
+
+{"type":"Scale",
+    "question":"Patiencs and Loyalty are your defining traits?",
+   "answers":["1,2,3,4,5,6,7,8,9,10"]
+    },
+
+{"type":"Scale",
+    "question":"You Believe JarJar Binks is really a Sith Lord, (Google it)",
+   "answers":["1,2,3,4,5,6,7,8,9,10"]
+    },
+    
+{"type":"Scale",
+    "question":"Endor is a great place to Visit?",
+   "answers":["1,2,3,4,5,6,7,8,9,10"]
+    },
+    
+{"type":"Scale",
+    "question":"Cruising along on your speederbike you see an injured Porg, Do you help?",
+   "answers":["1,2,3,4,5,6,7,8,9,10"]
+    },
+
+{"type":"Scale",
+    "question":"The Millennium Falcon is a hunk of junk",
+    "answers":["1,2,3,4,5,6,7,8,9,10"]
+        }
+
+      
+]
+
