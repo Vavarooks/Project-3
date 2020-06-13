@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
-import NavBar from './../../components/Navbar';
+// import NavBar from './../../components/Navbar';
 import Winners from '../winners';
 import Losers from './../losers'
 import AllTodosList from "../popular"
@@ -10,6 +10,8 @@ import SignIn from '../SignIn';
 import UserTodoList from '../userWatchList';
 import SignOut from '../SignOut';
 import Home from './../home/index';
+import NavBar from '../../components/Navbar';
+
 import './../../index.css'
 
 // import Chat from '../chatComponent';
@@ -21,7 +23,6 @@ import { connect } from 'react-redux';
 
 
 
-// import Navbar from './../../components/Navbar';
 
 
 class App extends Component {
