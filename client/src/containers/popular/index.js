@@ -8,6 +8,7 @@ import { getAllTodos } from '../../actions/stocks';
 import DeleteTodoModal from './../../components/DeleteModal';
 import { Table } from 'semantic-ui-react'
 import FormContainer from './../searchForm/formContainer/index'
+import moment from 'moment'
 
 class AllTodosList extends Component {
   componentDidMount() {
@@ -52,7 +53,7 @@ class AllTodosList extends Component {
   {this.props.allTodos.map(({_id,text,dateCreated})=>(
      <Table.Row key={_id}>
          <Table.Cell> <h3>{text}</h3></Table.Cell>
-         <Table.Cell>{dateCreated}</Table.Cell>
+         <Table.Cell>{moment(dateCreated).fromNow()}</Table.Cell>
    
         </Table.Row>
    ))}

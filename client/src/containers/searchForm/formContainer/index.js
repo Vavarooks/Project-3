@@ -6,7 +6,7 @@ import { Grid,Message } from 'semantic-ui-react'
 import Card from './../Card'
 import Plot from 'react-plotly.js';
 import otherUtil from './../otherutil'
-
+  
 
 
  
@@ -18,19 +18,9 @@ export default class FormContainer extends Component {
         yvalues:[]
        };
       componentDidMount() {
-
-   
- 
-
-        this.searchMovies('msft');
+        this.searchMovies('aapl');
  
       }
-
- 
-
-    
-
-
 
       searchMovies = (query) => {
         let xfunction=[];
@@ -39,7 +29,7 @@ export default class FormContainer extends Component {
         otherUtil.search(query)
         .then((response)=>{
           this.setState({result:response.data},()=>{
-            console.log(response.data)
+            console.log('post json',response.data)
           })
         })
 
@@ -73,12 +63,13 @@ export default class FormContainer extends Component {
       };
 
     render() {
+      
         return (
             <div>
 
 <div>
-<Grid padded='horizontally'textAlign='center' verticalAlign='middle'>
-        <Grid.Column style={{ maxWidth: 700 }}>
+{/* <Grid padded='horizontally'textAlign='center' verticalAlign='middle'>
+        <Grid.Column style={{ maxWidth: 700 }}> */}
 
  
           <SearchBar
@@ -87,6 +78,8 @@ export default class FormContainer extends Component {
  handleFormSubmit={this.handleFormSubmit}
 />
 <Card
+exchange={this.state.result.exchange}
+weburl={this.state.result.weburl}
 ticker={this.state.result.ticker}
 logo={this.state.result.logo}
 heading={this.state.result.name || 
@@ -98,6 +91,11 @@ heading={this.state.result.name ||
  }>
  {this.state.result.name ? (
  <Detail
+ weburl={this.state.result.weburl}
+
+ exchange={this.state.result.exchange}
+ shareOutstanding={this.state.result.shareOutstanding}
+ finnhubIndustry={this.state.result.finnhubIndustry}
  name={this.state.result.name}
  ticker={this.state.result.ticker}
  logo={this.state.result.logo}
@@ -106,6 +104,8 @@ heading={this.state.result.name ||
   <h3> </h3>
 ) }
 </Card>
+
+{/* <UserTodoList/> */}
 <div>
 <Plot 
         data={[
@@ -117,13 +117,16 @@ heading={this.state.result.name ||
             marker: {color: 'red'},
           }
         ]}
-        layout={{width: 630, height: 450 }}
-      />
-</div>
+        layout={{width: 630, height: 450, }}
+       />
+
+
+
+ </div>
  
 
-</Grid.Column>
-</Grid>
+{/* </Grid.Column>
+</Grid> */}
        </div>
 
 

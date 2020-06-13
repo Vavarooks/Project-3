@@ -1,15 +1,14 @@
 import React from 'react';
 import DeleteTodoModal from '../../../components/DeleteModal';
 import { Table } from 'semantic-ui-react'
-
-
+import moment from 'moment'
+ 
 
 export default (props) => {
   
   return(
  <div>
-
-   <Table singleLine>
+     <Table singleLine>
     <Table.Header>
       <Table.Row>
       <Table.HeaderCell>Stock Name</Table.HeaderCell>
@@ -22,7 +21,7 @@ export default (props) => {
 {props.todos.map(({_id,completed,text,dateCreated})=>(
    <Table.Row key={_id}>
        <Table.Cell > <h5>{text}</h5></Table.Cell>
-       <Table.Cell>{dateCreated} </Table.Cell>
+       <Table.Cell>{moment(dateCreated).fromNow()} </Table.Cell>
        <DeleteTodoModal handleDelete={props.handleDelete} id={_id} text={text}/>
 
        </Table.Row>

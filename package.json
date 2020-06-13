@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "12.16.1",
+    "npm": "6.13.4"
+  },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node index.js",
@@ -33,6 +37,6 @@
     "plotly.js": "^1.54.2",
     "react-plotly.js": "^2.4.0",
     "react-sound": "^1.2.0",
-    "validator": "^13.1.0"
+    "validator": "^13.1.1"
   }
 }

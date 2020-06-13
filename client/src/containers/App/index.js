@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
-import NavBar from './../../components/Navbar';
+// import NavBar from './../../components/Navbar';
 import Winners from '../winners';
 import Losers from './../losers'
 import AllTodosList from "../popular"
@@ -9,7 +9,9 @@ import SignUp from '../SignUp';
 import SignIn from '../SignIn';
 import UserTodoList from '../userWatchList';
 import SignOut from '../SignOut';
-import Home from './../home';
+import Home from './../home/index';
+import NavBar from '../../components/Navbar';
+
 import './../../index.css'
 
 // import Chat from '../chatComponent';
@@ -21,7 +23,6 @@ import { connect } from 'react-redux';
 
 
 
-// import Navbar from './../../components/Navbar';
 
 
 class App extends Component {
@@ -45,7 +46,7 @@ class App extends Component {
 
 
 
-           <Route exact path='/' component={SignUp}/>
+           <Route exact path='/signup' component={SignUp}/>
            <Route exact path='/signin' component={SignIn}/>
            <Route exact path='/signout' component={SignOut}/>
 
@@ -62,7 +63,9 @@ class App extends Component {
           <Route exact path='/' component={SignUp}/> */}
         </Grid.Column>
       </Grid>
-      <Route exact path='/home' component={Home}/>
+
+      {/* <Route exact path='/' component={Home}/> */}
+
       <Route exact path='/watchlist' component={UserTodoList}/>
 
 
