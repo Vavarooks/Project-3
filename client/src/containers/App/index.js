@@ -26,33 +26,30 @@ import { connect } from 'react-redux';
 
 class App extends Component {
   //
-  state = { activeItem: 'home' }
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+ 
 
   render () {
-    const { activeItem } = this.state
-
+ 
     console.log(this.props)
     return (
-      <Grid textAlign='center' style={{ height: '10vh' }} verticalAlign='middle'>
+      <div>
+      <Grid textAlign='center'   verticalAlign='middle'>
         <Grid.Column style={{ maxWidth: 700 }}>
           
            <NavBar authenticated={this.props.authenticated}/>
-           <Route exact path='/home' component={Home}/>
 
            <Route exact path='/winners' component={Winners}/>
            <Route exact path='/losers' component={Losers}/>
 
  
 
-           <Route exact path='/popular' component={AllTodosList}/>
 
 
            <Route exact path='/' component={SignUp}/>
            <Route exact path='/signin' component={SignIn}/>
            <Route exact path='/signout' component={SignOut}/>
-           <Route exact path='/usertodos' component={UserTodoList}/>
 
+           <Route exact path='/popular' component={AllTodosList}/>
 
 
           {/* <Navbar isLoggedIn={this.props.authenticated}/>
@@ -65,6 +62,11 @@ class App extends Component {
           <Route exact path='/' component={SignUp}/> */}
         </Grid.Column>
       </Grid>
+      <Route exact path='/home' component={Home}/>
+      <Route exact path='/watchlist' component={UserTodoList}/>
+
+
+</div>
     );
   }
 }

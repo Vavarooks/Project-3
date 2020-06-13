@@ -17,7 +17,7 @@ export default (props) => (
 
 
 
-{props.authenticated ? <Menu.Item as ={Link} to="/usertodos" content="WatchList" icon='eye'/>
+{props.authenticated ? <Menu.Item as ={Link} to="/watchlist" content="WatchList" icon='eye'/>
 :null }
 
  {props.authenticated ? <Menu.Item as ={Link} to="/popular" icon='chart line'content="popular"/>
