@@ -91,6 +91,8 @@ heading={this.state.result.name ||
  }>
  {this.state.result.name ? (
  <Detail
+ weburl={this.state.result.weburl}
+
  exchange={this.state.result.exchange}
  shareOutstanding={this.state.result.shareOutstanding}
  finnhubIndustry={this.state.result.finnhubIndustry}
