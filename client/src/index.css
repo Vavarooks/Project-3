@@ -1,14 +1,8 @@
 body{
-    background-color: rgb(109, 102, 102)}
+    background-image: url(https://lh3.googleusercontent.com/CIpH_KrJ7qY0zgX1SEleTdD6C1xTvj6HlIYyYarhInkP638s696nLq7pGUMlzAdh_8J2ifgmCj97UuyaQaPhgQbNhx76ru_xdUiBESTtaluCw9lC6-LqaDXANomL7ZTdAMpMqXvmKg=w2400);
+    background-repeat: no-repeat;
+    background-size: 99%;
 
-    .navBar {
-
-        color:rgb(214, 31, 31);
-    }
-
-.detail{margin-left:170px;
 }
- 
-li{margin-bottom:5px}
-.form-control{margin-left:190px; margin-bottom:0}
- 
+    
+       
