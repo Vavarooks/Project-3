@@ -9,8 +9,7 @@ import SignUp from '../SignUp';
 import SignIn from '../SignIn';
 import UserTodoList from '../userWatchList';
 import SignOut from '../SignOut';
-import Home from './../home/index';
-import NavBar from '../../components/Navbar';
+ import NavBar from '../../components/Navbar';
 
 import './../../index.css'
 
@@ -64,8 +63,7 @@ class App extends Component {
         </Grid.Column>
       </Grid>
 
-      {/* <Route exact path='/' component={Home}/> */}
-
+ 
       <Route exact path='/watchlist' component={UserTodoList}/>
 
 

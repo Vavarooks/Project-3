@@ -1,9 +1,10 @@
 body{
     background-image: url(https://lh3.googleusercontent.com/CIpH_KrJ7qY0zgX1SEleTdD6C1xTvj6HlIYyYarhInkP638s696nLq7pGUMlzAdh_8J2ifgmCj97UuyaQaPhgQbNhx76ru_xdUiBESTtaluCw9lC6-LqaDXANomL7ZTdAMpMqXvmKg=w2400);
     background-repeat: no-repeat;
-    background-size: 116%;
-    
+    background-size: 99%;
 
 }
     
-       
+.form-control{margin-left:190px; margin-bottom:0}
+.detail{margin-left:170px;
+}

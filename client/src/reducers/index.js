@@ -5,8 +5,10 @@ import todosReducer from './todosReducer';
 import authReducer from './authReducer';
  import { ADD_TODO } from '../actions/types';
  
+ 
 export default combineReducers({
-   auth: authReducer,
+   
+  auth: authReducer,
   todos: todosReducer,
   counter: counterReducer,
   form: formReducer
