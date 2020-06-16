@@ -91,7 +91,7 @@ state={
 
 
 
-       <Header as="h2" color="blue" textAlign="center" content="watchlist"/>
+       <Header as="h2" color="green" textAlign="center" content="watchlist"/>
           <Form size='large' onSubmit={handleSubmit(this.onSubmit)}>
               <Segment stacked>
                 <Field
@@ -101,7 +101,7 @@ state={
                 <Button
                 type='submit'
                 fluid
-                color='blue'
+                color='green'
                 content='add'
                 />
               </Segment>
