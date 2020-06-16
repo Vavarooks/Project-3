@@ -5,7 +5,10 @@ import SearchBar from './../search'
 import { Grid,Message } from 'semantic-ui-react'
 import Card from './../Card'
 import Plot from 'react-plotly.js';
+import {connect} from 'react-redux'
+ 
 import otherUtil from './../otherutil'
+import axios from 'axios'
   
 
 
@@ -19,19 +22,30 @@ export default class FormContainer extends Component {
        };
       componentDidMount() {
         this.searchMovies('aapl');
- 
+  
       }
 
-      searchMovies = (query) => {
+      searchMovies = async (query) => {
         let xfunction=[];
         let yfunction=[];
+
+        // const finhubUrl = "https://finnhub.io/api/v1/stock/profile2?symbol=";
+        // const token = "&token=brffu2vrh5rf96nt3qkg";
+        // const {data}=await axios.get(finhubUrl + query + token)
+        // this.setState({result:data},()=>{
+        //   console.log('this is data',data)
+        // })
+ 
 
         otherUtil.search(query)
         .then((response)=>{
           this.setState({result:response.data},()=>{
-            console.log('post json',response.data)
+            console.log(response.data)
           })
         })
+
+    
+        
 
          API.search(query)
         .then((response)=>{
@@ -40,8 +54,7 @@ export default class FormContainer extends Component {
             yfunction.push(response.data['Time Series (Daily)'][key]['1. open'])
           }
           this.setState({xvalues:xfunction,yvalues:yfunction})
-          console.log(xfunction)
-          console.log(yfunction)
+           
          })
         .catch((e)=>{
             console.log(e)
@@ -103,7 +116,7 @@ heading={this.state.result.name ||
  ) : (
   <h3> </h3>
 ) }
-</Card>
+</Card> 
 
 {/* <UserTodoList/> */}
 <div>
@@ -137,3 +150,8 @@ heading={this.state.result.name ||
         )
     }
 }
+
+// function mapStateToProps(state){
+//   return {allResult:state.result.allResult,resultError:state.result.allResult}
+// }
+// export default connect(mapStateToProps,{getResult})(FormContainer)
