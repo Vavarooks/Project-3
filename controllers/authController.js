@@ -48,7 +48,7 @@ module.exports = {
     }
   },
   signIn: (req, res) => {
-  console.log('signing in...')
+  // console.log('signing in...')
   return res.json({ token: tokenForUser(req.user) });
   },
 };

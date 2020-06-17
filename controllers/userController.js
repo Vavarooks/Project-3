@@ -30,7 +30,7 @@ module.exports = {
     }
   },
   getAllUserEmails: async (req, res) => {
-    console.log("checking email database...")
+    // console.log("checking email database...")
     const {email}=req.query
     try {
       const userEmail = await User.findOne({email}, 'email');
