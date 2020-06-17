@@ -7,13 +7,14 @@ import Card from './../Card'
 import Plot from 'react-plotly.js';
 import {connect} from 'react-redux'
  
+
 import otherUtil from './../otherutil'
 import axios from 'axios'
   
 
 
  
-export default class FormContainer extends Component {
+ export default class FormContainer extends Component {
     state = {
         result: {},
         search: "",
@@ -29,12 +30,7 @@ export default class FormContainer extends Component {
         let xfunction=[];
         let yfunction=[];
 
-        // const finhubUrl = "https://finnhub.io/api/v1/stock/profile2?symbol=";
-        // const token = "&token=brffu2vrh5rf96nt3qkg";
-        // const {data}=await axios.get(finhubUrl + query + token)
-        // this.setState({result:data},()=>{
-        //   console.log('this is data',data)
-        // })
+        
  
 
         otherUtil.search(query)
@@ -44,7 +40,7 @@ export default class FormContainer extends Component {
           })
         })
 
-    
+     
         
 
          API.search(query)
@@ -155,3 +151,8 @@ heading={this.state.result.name ||
 //   return {allResult:state.result.allResult,resultError:state.result.allResult}
 // }
 // export default connect(mapStateToProps,{getResult})(FormContainer)
+
+// function mapStateToProps(state){
+//   return{allResult:state.result.allResult,resultError:state.result.resultError}
+// }
+// export default connect(mapStateToProps,{searchMovies})(FormContainer)

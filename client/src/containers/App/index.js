@@ -10,7 +10,7 @@ import SignIn from '../SignIn';
 import UserTodoList from '../userWatchList';
 import SignOut from '../SignOut';
  import NavBar from '../../components/Navbar';
-
+ 
 import './../../index.css'
 
 // import Chat from '../chatComponent';
@@ -38,6 +38,7 @@ class App extends Component {
           
            <NavBar authenticated={this.props.authenticated}/>
 
+ 
            <Route exact path='/winners' component={Winners}/>
            <Route exact path='/losers' component={Losers}/>
 
@@ -65,6 +66,8 @@ class App extends Component {
 
  
       <Route exact path='/watchlist' component={UserTodoList}/>
+
+      {/* <Route exact path='/home' component={Home}/> */}
 
 
 </div>

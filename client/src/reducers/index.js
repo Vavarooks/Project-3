@@ -4,10 +4,11 @@ import counterReducer from './counterReducer';
 import todosReducer from './todosReducer';
 import authReducer from './authReducer';
  import { ADD_TODO } from '../actions/types';
+//  import resultReducer from './resultReducer'
  
  
 export default combineReducers({
-   
+  // result: resultReducer,
   auth: authReducer,
   todos: todosReducer,
   counter: counterReducer,
