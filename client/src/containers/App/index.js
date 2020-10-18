@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route,Switch,HashRouter } from 'react-router-dom';
+import { Route,Switch,BrowserRouter } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
 // import NavBar from './../../components/Navbar';
 import Winners from '../winners';
@@ -38,7 +38,7 @@ class App extends Component {
           <React.Fragment>
 
            
-          <HashRouter>
+          <BrowserRouter>
 <Switch>
 
             <NavBar authenticated={this.props.authenticated}/>
@@ -74,7 +74,7 @@ class App extends Component {
       </Switch>
 
       {/* <Route exact path='/home' component={Home}/> */}
-      </HashRouter>
+      </BrowserRouter>
 
       </React.Fragment>
 
