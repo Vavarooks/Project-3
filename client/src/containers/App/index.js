@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route,BrowserRouter } from 'react-router-dom';
+import { Route,Switch,HashRouter } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
 // import NavBar from './../../components/Navbar';
 import Winners from '../winners';
@@ -34,9 +34,14 @@ class App extends Component {
       <div>
       {/* <Grid textAlign='center'   verticalAlign='middle'>
         <Grid.Column style={{ maxWidth: 700 }}> */}
-          <BrowserRouter>
+          
+          <React.Fragment>
 
-           <NavBar authenticated={this.props.authenticated}/>
+           
+          <HashRouter>
+<Switch>
+
+            <NavBar authenticated={this.props.authenticated}/>
    
            <Route exact path='/winners' component={Winners}/>
            <Route exact path='/losers' component={Losers}/>
@@ -66,9 +71,13 @@ class App extends Component {
 
  
       <Route exact path='/watchlist' component={UserTodoList}/>
+      </Switch>
 
       {/* <Route exact path='/home' component={Home}/> */}
-      </BrowserRouter>
+      </HashRouter>
+
+      </React.Fragment>
+
 
 
 </div>
