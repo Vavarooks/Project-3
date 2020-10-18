@@ -36,8 +36,7 @@ class App extends Component {
       {/* <Grid textAlign='center'   verticalAlign='middle'>
         <Grid.Column style={{ maxWidth: 700 }}> */}
 
-<BrowserRouter> 
-
+ 
                        <NavBar authenticated={this.props.authenticated}/>
 
  
@@ -76,8 +75,7 @@ class App extends Component {
 
       </Switch> 
 
-</BrowserRouter>
- 
+  
 
 
 </div>
