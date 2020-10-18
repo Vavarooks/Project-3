@@ -18,14 +18,11 @@ const store = createStore(
   // socketMiddleware(),
 );
 ReactDOM.render(
-  <BrowserRouter> 
-
+  
   <Provider store={store}>
-    <BrowserRouter/>
-    <Router>
+     <Router>
       <App />
     </Router>
   </Provider>
-  </BrowserRouter>
   ,
   document.getElementById('root')); 
