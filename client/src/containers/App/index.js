@@ -35,8 +35,7 @@ class App extends Component {
       {/* <Grid textAlign='center'   verticalAlign='middle'>
         <Grid.Column style={{ maxWidth: 700 }}> */}
           
-          <React.Fragment>
-
+ 
            
 <HashRouter> 
             <NavBar authenticated={this.props.authenticated}/>
@@ -72,8 +71,7 @@ class App extends Component {
  
       {/* <Route exact path='/home' component={Home}/> */}
 </HashRouter>
-      </React.Fragment>
-
+ 
 
 
 </div>
