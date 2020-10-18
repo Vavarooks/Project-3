@@ -9,6 +9,7 @@ import DeleteTodoModal from './../../components/DeleteModal';
 import { Table } from 'semantic-ui-react'
 import FormContainer from './../searchForm/formContainer/index'
 import moment from 'moment'
+import './../../index.css'
 
 class AllTodosList extends Component {
   componentDidMount() {
@@ -72,12 +73,14 @@ class AllTodosList extends Component {
   render() {
     console.log(this.props);
     return (
+      <div className='community'>
       <List celled selection size='huge'>
         {this.props.getAllTodosError ? <Message negative header={this.props.getAllTodosError}/> : null}
       { this.renderList() }
 
        </List>
-    );
+       </div>
+     );
   }
 }
 

@@ -2,12 +2,13 @@ import React from 'react';
 import DeleteTodoModal from '../../../components/DeleteModal';
 import { Table } from 'semantic-ui-react'
 import moment from 'moment'
+import './../../../index.css'
  
 
 export default (props) => {
   
   return(
- <div>
+ <div className='watchlist'>
      <Table singleLine>
     <Table.Header>
       <Table.Row>

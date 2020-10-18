@@ -22,7 +22,7 @@ import axios from 'axios'
         yvalues:[]
        };
       componentDidMount() {
-        this.searchMovies('aapl');
+        this.searchMovies('ibm');
   
       }
 

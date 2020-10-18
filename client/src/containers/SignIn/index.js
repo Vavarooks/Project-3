@@ -81,7 +81,7 @@ class SignIn extends Component {
   render(){
     const {handleSubmit,invalid,submitting,submitFailed}=this.props
     return(
-      <Form size='large' onSubmit={handleSubmit(this.onSubmit)}>
+      <Form size='large' onSubmit={handleSubmit(this.onSubmit)} style={{margin:'30px'}}>
         <Segment stacked>
           <Field
           name='email'
@@ -100,7 +100,7 @@ class SignIn extends Component {
           />
           <Button
           content='Sign In'
-          color='blue'
+          color='teal'
           fluid
           size='large'
           type='submit'

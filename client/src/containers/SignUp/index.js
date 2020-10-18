@@ -71,7 +71,7 @@ class SignUp extends Component {
      const {handleSubmit, invalid, submitting, submitFailed} = this.props;
     return (
       // onSubmit={handleSubmit(this.onSubmit)}
-     <Form size='large' onSubmit={handleSubmit(this.onSubmit)}>
+     <Form size='large' onSubmit={handleSubmit(this.onSubmit)} style={{margin:'30px'}}>
         <Segment stacked>
           <Field
           name='email'
@@ -91,7 +91,7 @@ class SignUp extends Component {
           />
           <Button
           content="Sign Up"
-          color="blue"
+          color="teal"
           fluid
           size="large"
           type="submit"

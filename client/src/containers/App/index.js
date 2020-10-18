@@ -10,8 +10,7 @@ import SignIn from '../SignIn';
 import UserTodoList from '../userWatchList';
 import SignOut from '../SignOut';
  import NavBar from '../../components/Navbar';
- 
-import './../../index.css'
+ import './../../index.css'
 
 // import Chat from '../chatComponent';
 
@@ -33,8 +32,8 @@ class App extends Component {
     console.log(this.props)
     return (
       <div>
-      <Grid textAlign='center'   verticalAlign='middle'>
-        <Grid.Column style={{ maxWidth: 700 }}>
+      {/* <Grid textAlign='center'   verticalAlign='middle'>
+        <Grid.Column style={{ maxWidth: 700 }}> */}
           
            <NavBar authenticated={this.props.authenticated}/>
 
@@ -50,7 +49,7 @@ class App extends Component {
            <Route exact path='/signin' component={SignIn}/>
            <Route exact path='/signout' component={SignOut}/>
 
-           <Route exact path='/popular' component={AllTodosList}/>
+           <Route exact path='/community' component={AllTodosList}/>
 
 
           {/* <Navbar isLoggedIn={this.props.authenticated}/>
@@ -61,8 +60,9 @@ class App extends Component {
           <Route exact path='/signin' component={SignIn}/>
           <Route exact path='/signout' component={SignOut}/>
           <Route exact path='/' component={SignUp}/> */}
+{/*         
         </Grid.Column>
-      </Grid>
+      </Grid> */}
 
  
       <Route exact path='/watchlist' component={UserTodoList}/>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Header, Button } from 'semantic-ui-react';
-
+import './../../index.css'
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { increment, decrement } from '../../actions/counter';
@@ -75,11 +75,9 @@ componentDidMount=()=>{
 
   render() {
     return (
-      <Grid centered>
-        <Grid.Column textAlign='center'>
+     <div className='losers'> 
  <LoserListItems losers={this.state.loser}/> 
-         </Grid.Column>
-      </Grid>
+         </div>
     );
   }
 }
