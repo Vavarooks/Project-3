@@ -10,6 +10,7 @@ import SignIn from '../SignIn';
 import UserTodoList from '../userWatchList';
 import SignOut from '../SignOut';
  import NavBar from '../../components/Navbar';
+ import Home from './../home/home'
  import './../../index.css'
 
 // import Chat from '../chatComponent';
@@ -69,7 +70,7 @@ class App extends Component {
  
       <Route exact path='/watchlist' component={UserTodoList}/>
  
-      {/* <Route exact path='/home' component={Home}/> */}
+      <Route exact path='/home' component={Home}/>
 </HashRouter>
  
 
