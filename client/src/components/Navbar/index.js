@@ -53,21 +53,21 @@ export default class Navbar extends Component {
       <Menu secondary inverted pointing  >
         {this.props.authenticated?<Menu.Item
           as ={Link}
-          to="/home"
+          to="#/home"
           name='home'
           active={activeItem === 'home'}
           onClick={this.handleItemClick}
         />:null}
         {this.props.authenticated?<Menu.Item
           as ={Link}
-          to="/winners"
+          to="#/winners"
           name='winners'
           active={activeItem === 'winners'}
           onClick={this.handleItemClick}
         />: null}
         {this.props.authenticated?<Menu.Item
           as ={Link}
-          to="/losers"
+          to="#/losers"
           name='losers'
           active={activeItem === 'losers'}
           onClick={this.handleItemClick}
@@ -75,7 +75,7 @@ export default class Navbar extends Component {
         
          {this.props.authenticated ? <Menu.Item
           as ={Link}
-          to="/watchlist"
+          to="#/watchlist"
           name='watchlist'
           active={activeItem === 'watchlist'}
           onClick={this.handleItemClick}
@@ -83,7 +83,7 @@ export default class Navbar extends Component {
 
          {this.props.authenticated ? <Menu.Item
           as ={Link}
-          to="/community"
+          to="#/community"
           name='community'
           icon='users'
           active={activeItem === 'community'}
