@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route,Switch,BrowserRouter } from 'react-router-dom';
+import { Route,Switch,HashRouter } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
 // import NavBar from './../../components/Navbar';
 import Winners from '../winners';
@@ -38,9 +38,7 @@ class App extends Component {
           <React.Fragment>
 
            
-          <BrowserRouter>
-<Switch>
-
+<HashRouter> 
             <NavBar authenticated={this.props.authenticated}/>
    
            <Route exact path='/winners' component={Winners}/>
@@ -71,11 +69,9 @@ class App extends Component {
 
  
       <Route exact path='/watchlist' component={UserTodoList}/>
-      </Switch>
-
+ 
       {/* <Route exact path='/home' component={Home}/> */}
-      </BrowserRouter>
-
+</HashRouter>
       </React.Fragment>
 
 
