@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 // const path = require('path')
 // const cors = require('cors');
 
-
-const app = express();
+ const app = express();
 // const server = require('http').createServer(app);
 // const io = require('socket.io')(server);
 
@@ -41,7 +40,13 @@ app.use(express.json());
 }
 
 
-
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, './client/public/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
  
 
 app.use("/",routes);
