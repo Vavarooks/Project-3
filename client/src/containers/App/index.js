@@ -38,9 +38,9 @@ class App extends Component {
           
  
            
-<HashRouter> 
-            <NavBar authenticated={this.props.authenticated}/>
-   
+             <NavBar authenticated={this.props.authenticated}/>
+             <HashRouter> 
+
            <Route exact path='/winners' component={Winners}/>
            <Route exact path='/losers' component={Losers}/>
 
