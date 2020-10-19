@@ -41,8 +41,7 @@ class App extends Component {
 
  
  
- <Switch>
-             <Route  exact path='/winners' component={Winners}/>
+              <Route  exact path='/winners' component={Winners}/>
            <Route exact path='/losers' component={Losers}/>
 
  
@@ -73,8 +72,7 @@ class App extends Component {
  
       <Route exact path='/home' component={Home}/>
 
-      </Switch> 
-
+ 
   
 
 
