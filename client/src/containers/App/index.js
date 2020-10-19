@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route,Switch,BrowserRouter } from 'react-router-dom';
+import { Route,Switch } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
 // import NavBar from './../../components/Navbar';
 import Winners from '../winners';
@@ -42,7 +42,7 @@ class App extends Component {
  
  
  <Switch>
-             <Route exact path='/winners' component={Winners}/>
+             <Route  exact path='/winners' component={Winners}/>
            <Route exact path='/losers' component={Losers}/>
 
  
