@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route,Switch } from 'react-router-dom';
+import { Route,Switch,HashRouter } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
 // import NavBar from './../../components/Navbar';
 import Winners from '../winners';
@@ -35,9 +35,12 @@ class App extends Component {
       <div>
       {/* <Grid textAlign='center'   verticalAlign='middle'>
         <Grid.Column style={{ maxWidth: 700 }}> */}
+<HashRouter> 
 
- 
-                       <NavBar authenticated={this.props.authenticated}/>
+
+  <Switch>
+
+                        <NavBar authenticated={this.props.authenticated}/>
 
  
  
@@ -73,8 +76,10 @@ class App extends Component {
       <Route exact path='/home' component={Home}/>
 
  
-  
+      </Switch>
 
+
+      </HashRouter>
 
 </div>
     );
